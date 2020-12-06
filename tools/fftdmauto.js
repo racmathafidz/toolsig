@@ -57,7 +57,7 @@ const {
     {
       type: "input",
       name: "delayTime",
-      message: "Input sleep time (in milliseconds):",
+      message: "Input sleep time (in milliseconds) (more? '|') :",
       validate: (val) => /[0-9]/.test(val) || "Only input numbers",
     },
   ];
@@ -85,8 +85,10 @@ const {
       );
       print("Collecting followers . . .", "wait");
       const targetFollowers = await ig.followersFeed(id);
+      const delayArr = delayTime.split("|")
+      const delayRandom = delayArr[Math.floor(Math.random() * delayArr.length)];
       print(
-        `Doing task with ratio ${perExec} target / ${delayTime} milliseconds \n`,
+        `Doing task with ratio ${perExec} target / ${delayArr} milliseconds \n`,
         "wait"
       );
       do {
@@ -134,13 +136,14 @@ const {
                 );
             })
           );
+          const fixDelay = delayRandom;
           if (i < items.length - 1)
             print(
-              `Current Account: (${login.username}) » Delay: ${perExec}/${delayTime}ms \n`,
+              `Current Account: (${login.username}) » Delay: ${perExec}/${fixDelay}ms \n`,
               "wait",
               true
             );
-          await delay(delayTime);
+          await delay(fixDelay);
         }
       } while (targetFollowers.moreAvailable);
       print(`Status: All Task done!`, "ok", true);

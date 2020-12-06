@@ -53,13 +53,18 @@ const main = async () => {
     choice == questionTools[1] && require("./tools/liketimeline.js");
     choice == questionTools[2] && require("./tools/liketarget.js");
     choice == questionTools[3] && require("./tools/delallmedia.js");
+
     choice == questionTools[4] && require("./tools/fftauto.js");
     choice == questionTools[5] && require("./tools/fftbetaauto.js");
+
     choice == questionTools[6] && require("./tools/fftautov2.js");
+
     choice == questionTools[7] && require("./tools/fftdmauto.js");
     choice == questionTools[8] && require("./tools/fftdmbetaauto.js");
+
     choice == questionTools[9] && require("./tools/fhtauto.js");
     choice == questionTools[10] && require("./tools/fltauto.js");
+    
     choice == questionTools[11] && require("./tools/unfollowall.js");
     choice == questionTools[12] && require("./tools/unfollnotfollback.js");
     choice == questionTools[13] && process.exit();
