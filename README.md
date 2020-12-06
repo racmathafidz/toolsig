@@ -68,6 +68,7 @@ $ [Other Information](#Other-Information)
 
 ## Update
 	☑ [05/12/2020] update toolsig v3
+	☑ [05/12/2020] Add fftbeta & fftdmbeta
 	☑ [03/12/2020] Add challenge_required request ig.
 	☑ [03/12/2020] Fix Some Errors, Features and Change Instagram API Version.
 
