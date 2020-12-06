@@ -141,13 +141,14 @@ const {
             })
           );
           const fixDelay = delayRandom;
+          const randomMin = fixDelay - Math.floor(Math.random() * 100000);
           if (i < items.length - 1)
             print(
-              `Current Account: (${login.username}) » Delay: ${perExec}/${fixDelay}ms \n`,
+              `Current Account: (${login.username}) » Delay: ${perExec}/${randomMin}ms \n`,
               "wait",
               true
             );
-          await delay(fixDelay);
+          await delay(randomMin);
         }
       } while (targetFollowers.moreAvailable);
       print(`Status: All Task done!`, "ok", true);
