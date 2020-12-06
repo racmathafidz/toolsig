@@ -140,6 +140,7 @@ const {
                 );
             })
           );
+          const delayRandom = delayArr[Math.floor(Math.random() * delayArr.length)];
           const fixDelay = delayRandom;
           const randomMin = fixDelay - Math.floor(Math.random() * 100000);
           if (i < items.length - 1)

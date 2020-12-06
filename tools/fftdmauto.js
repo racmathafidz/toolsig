@@ -86,7 +86,7 @@ const {
       print("Collecting followers . . .", "wait");
       const targetFollowers = await ig.followersFeed(id);
       const delayArr = delayTime.split("|")
-      const delayRandom = delayArr[Math.floor(Math.random() * delayArr.length)];
+      
       print(
         `Doing task with ratio ${perExec} target / ${delayArr} milliseconds \n`,
         "wait"
@@ -136,6 +136,7 @@ const {
                 );
             })
           );
+          const delayRandom = delayArr[Math.floor(Math.random() * delayArr.length)];
           const fixDelay = delayRandom;
           const randomMin = fixDelay - Math.floor(Math.random() * 100000);
           if (i < items.length - 1)
