@@ -80,7 +80,6 @@ $ [Other Information](#Other-Information)
 
 ## Other Information
 	☆ https://github.com/dilame/instagram-private-api
-	☆ Github -> @ccocot . @aldinp16 . @rifqihaidar . @dilame . @ikiganteng . @masokky
 	☆ Thank you for the help of all members SGB TEAM REBORN (https://www.sgb.or.id/).
 
 ## License
