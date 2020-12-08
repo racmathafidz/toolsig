@@ -136,12 +136,20 @@ const {
                 );
             })
           );
+          //Delay
           const delayRandom = delayArr[Math.floor(Math.random() * delayArr.length)];
           const fixDelay = delayRandom;
           const randomMin = fixDelay - Math.floor(Math.random() * 100000);
+          //Time
+          const d = new Date();
+          const h = d.getHours();
+          const m = d.getMinutes();
+          const s = d.getSeconds();
+          const time = h+":"+m+":"+s;
+
           if (i < items.length - 1)
             print(
-              `Current Account: (${login.username}) » Delay: ${perExec}/${randomMin}ms \n`,
+              `Current Account: (${login.username}) » Delay: ${perExec}/${randomMin}ms [${time}]\n`,
               "wait",
               true
             );
